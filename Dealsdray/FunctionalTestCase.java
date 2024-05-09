@@ -48,6 +48,12 @@ public class FunctionalTestCase {
 	    r.keyPress(KeyEvent.VK_ENTER);
 	    r.keyRelease(KeyEvent.VK_ENTER);
 	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//button[text()='Import']")).click();
+	    driver.findElement(By.xpath("//button[text()='Validate Data']")).click();
+	    Thread.sleep(2000);
+		Alert alt=driver.switchTo().alert();
+	    alt.accept();
+	    Thread.sleep(2000);
 	    
 	    driver.findElement(By.xpath("//button[text()='Import']")).click();
 	    //Screenshot
